@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="main-container">
+      <main>
+        <div id="contact-container">
+          <h2 class="section-heading">Contact Me</h2>
+          <form id="contact-form" name="contact-form" method="post" action=" https://httpbin.org/post" onsubmit="return validateForm()">
+            <div class="field-container">
+              <label for="name" class="field-label">Name:</label>
+              <input type="text" class="textbox" name="name" id="name" placeholder="Enter your name"/>
+            </div>
+            <div class="field-container">
+              <label for="email" class="field-label">Email:</label>
+              <input type="email" class="textbox" name="email" id="email" placeholder="Enter your email"/>
+            </div>
+            <div class="field-container">
+              <label for="address" class="field-label">Address:</label>
+              <input type="text" class="textbox" name="address" id="address" placeholder="Enter your street address"/>
+            </div>
+            <div class="field-container">
+              <label for="city" class="field-label">City:</label>
+              <input list="city-list" id="city" name="city" placeholder="Choose one or enter new city"/>
+              <datalist id="city-list">
+                  <option value="Toronto">
+                  <option value="Mississauga">
+                  <option value="Scarborough">
+                  <option value="Oakville">
+                  <option value="Burlington">
+                  <option value="Niagra">
+                  <option value="Vaughan">
+                  <option value="Hamilton">
+                  <option value="Kitchener">
+                  <option value="Oshawa">
+              </datalist>
+            </div>
+            <div class="field-container">
+              <label for="postal" class="field-label">Postal Code:</label>
+              <input type="text" class="textbox" name="postal" id="postal" placeholder="Enter your postal code"/>
+            </div>
+            <fieldset class="field-container">
+              <legend>What is this about?</legend>
+              <div id="radio-container" tabindex="0">
+                <div class="radio-inner-container">
+                  <input type="radio" class="radio" name="purpose" id="question" value="question" onclick="handleChange(this.id);">
+                  <label for="question" class="field-label">Question</label>
+                </div>
+                <div class="radio-inner-container">
+                  <input type="radio" class="radio" name="purpose" id="comment" value="comment" onclick="handleChange(this.id);">
+                  <label for="comment" class="field-label">Comment</label>
+                </div>
+                <div class="radio-inner-container">
+                  <input type="radio" class="radio" name="purpose" id="hiring" value="hiring" onclick="handleChange(this.id);"/>
+                  <label for="hiring" class="field-label">Hiring</label>
+                  <input type="text" id="pph" name="pph" class="hidden" placeholder="Enter hourly rate">
+                </div>
+              </div>
+            </fieldset>
+            <div class="field-container">
+              <label for="message" class="field-label">Message:</label>
+              <Textarea id="message" placeholder="Enter you message here"></Textarea>
+            </div>
+            <input type="text" class="hidden" value="Ishpreet Kaur 153465208">
+            <input type="submit" id="submit-btn" class="btn">
+          </form>
+        </div>
+      </main>
+      <footer>
+          &copy; 2021 Ishpreet Kaur
+      </footer>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
